@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
+
+* {box-sizing:border-box; margin: 0; padding: 0; margin-block-start: 0; margin-block-end: 0; margin-inline-start: 0; margin-inline-end: 0;}
+img {max-width: 100%; display: block; position: relative; border-radius: 18px;}
+html {overflow-y: scroll;}
+
+header {position: fixed; top: 0; left: 0; padding: 30px 100px 35px 100px; z-index: 1000; width: 100%; display: flex; justify-content: space-between; align-items: center; background-color: #ba8d64;}
+nav {display: flex; justify-content: space-between; align-items: center; column-gap: 20px;}
+body {font-size: 16px; font-family: 'Open Sans', sans-serif; padding: 10vw 5vw 5vw 5vw; line-height: 1.5;}
+body {background: linear-gradient(#000000AA, #000000AA), url(img/back.jpg); background-size: 135%; background-position: 50% 40%;}
+h1 {position: relative; font-size: 60px; font-weight: 700; width: fit-content; line-height: 1; color: #4b5320 ;}
+h2 {font-size: 35px; color: #4b5320;}
+a {font-size: 30px; font-weight: 700; color: #4b5320;}
+a:hover {color: maroon; text-decoration: none;}
+.desactivado {color: maroon; text-decoration: none; pointer-events: none;}
+
+#board {display: flex; flex-wrap: wrap; justify-content: space-between; width: 50%; margin: auto; row-gap: 10px;}
+#board img {width: 19%;}
+
+img:hover {cursor: pointer; box-shadow: 0px 0px 15px white;}
+img.no-click {pointer-events: none;}
+
+.missatge {position: fixed; top: 20%; width: 200px; height: 200px; border-radius: 50%; color: white; font-size: 25px; font-weight: 700; text-align: center; display: none;}
+.missatge-visible {display: flex; justify-content: center; align-items: center; animation: apareixer 2s forwards;}
+#error {left: 15%; background-color: #f73535;}
+#acierto {right: 15%; background-color: #469746;}
+
+@media (max-width: 767px) {
+body {background-color: #f73535;}
+/* end media query */}
+
+
+.carta-definitiva {animation: mymove-definitiva 2s forwards}
+
+@keyframes mymove-definitiva {
+  20% {box-shadow: 0px 0px 30px #67e667;} 
+  30% {box-shadow: 0px 0px 10px #67e667;}
+  40% {box-shadow: 0px 0px 30px #67e667;}
+  30% {box-shadow: 0px 0px 10px #67e667;}
+  60% {box-shadow: 0px 0px 30px #67e667;}
+}
+
+.carta-equivocada {animation: mymove-equivocada 2s forwards}
+
+@keyframes mymove-equivocada {
+  10% {box-shadow: 0px 0px 30px #f73535;}
+  20% {box-shadow: 0px 0px 10px #f73535;}
+  30% {box-shadow: 0px 0px 30px #f73535;}
+  40% {box-shadow: 0px 0px 10px #f73535;}
+  50% {box-shadow: 0px 0px 30px #f73535;}
+  60% {box-shadow: 0px 0px 10px #f73535;}
+  70% {box-shadow: 0px 0px 30px #f73535;}
+}
+
+@keyframes apareixer {
+  0% {opacity: 0;}
+  5% {opacity: 1;}
+  10% {opacity: 0;}
+  20% {opacity: 1;}
+  30% {opacity: 0;}
+  60% {opacity: 1;}
+  94% {opacity: 0;}
+  95% {opacity: 1;}
+}
